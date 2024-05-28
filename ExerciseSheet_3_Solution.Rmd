@@ -75,6 +75,17 @@ print(paste("Total number of babies in 2022:", total_babies_2022))
 => Year 2022 had the bigger baby boom.
 
 
+### Subtask d)
+
+```{r}
+data_2023 <- data_2023 %>%
+  mutate(year = 2023)
+
+data_2022 <- data_2022 %>%
+  mutate(year = 2022)
+```
+
+
 
 ## Exercise 4: Open Analysis (4 points)
 
