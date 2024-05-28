@@ -98,8 +98,22 @@ showCombined <- bind_rows(slice(data_combined, 1:5), slice(data_combined, 4290:4
 print(showCombined)
 ```
 
+### Subtask f)
 
+```{r}
+library(knitr)
 
+names_combined <- data_combined %>%
+  group_by(Vorname) %>%
+  summarize(Total_Count = sum(Anzahl, na.rm = TRUE)) %>%
+  arrange(desc(Total_Count))
+
+top_10_names <- names_combined %>%
+  top_n(10, Total_Count) %>%
+  arrange(desc(Total_Count))
+
+kable(top_10_names, caption = "Top 10 Most Popular Names Across 2022 and 2023")
+```
 
 
 ## Exercise 4: Open Analysis (4 points)
