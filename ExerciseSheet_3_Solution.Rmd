@@ -83,7 +83,22 @@ data_2023 <- data_2023 %>%
 
 data_2022 <- data_2022 %>%
   mutate(year = 2022)
+
+head(data_2023, 5)
+head(data_2022, 5)
 ```
+
+
+### Subtask e)
+
+```{r}
+data_combined <- bind_rows(data_2023, data_2022)
+
+showCombined <- bind_rows(slice(data_combined, 1:5), slice(data_combined, 4290:4295))
+print(showCombined)
+```
+
+
 
 
 
