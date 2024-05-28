@@ -62,8 +62,17 @@ class(data_2022$Anzahl)
 
 **Explanation:** The column "Anzahl" initially had the type "character", because it contained the term "4 oder weniger", which was used to express the number of occurrences of a specific name being 4 or fewer. In order to covert the type to "numeric", the term "4 oder weniger" was substituted with the numeric value 4. The obvious repercussion is, that all instances where the count was actually fewer than 4 are now recorded as exactly 4, which is inaccurate.
 
+### Subtask c)
 
+```{r}
+total_babies_2023 <- sum(data_2023$Anzahl, na.rm = TRUE)
+total_babies_2022 <- sum(data_2022$Anzahl, na.rm = TRUE)
 
+print(paste("Total number of babies in 2023:", total_babies_2023))
+print(paste("Total number of babies in 2022:", total_babies_2022))
+```
+
+=> Year 2022 had the bigger baby boom.
 
 
 
