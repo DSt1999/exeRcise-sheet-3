@@ -159,6 +159,22 @@ head(dev_breast_cancer, 10)
 
 **Explanation:** This new dataset introduces a new variable called "Change," which shows the difference in five-year-survival rates for breast cancer between the later survey year (e.g., 2009) and the earlier survey year (e.g., 2004). "NA"-values exist for survey years where there is no earlier survey year, such as 1999.
 
+### Subtask f)
+
+```{r fig.cap = Five-Year Breast Cancer Survival Rates Over Time for Selected Countries: Japan, USA, Germany, Korea, and China"}
+spec_countries <- c("Japan", "United States", "Germany", "South Korea", "China")
+data_breast_cancer_spec <- data_breast_cancer %>%
+  filter(Entity %in% spec_countries)
+
+ggplot(data_breast_cancer_spec, aes(x = factor(Year), y = Breast, fill = Entity)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(title = "Five-Year Breast Cancer Survival Rates Over Time",
+       x = "Year",
+       y = "Survival Rate (%)",
+       fill = "Country") +
+  theme_light()
+```
+
 ## Final Note
 
 Make sure to push all your commits and changes to GitHub before
