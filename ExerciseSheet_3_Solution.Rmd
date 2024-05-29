@@ -142,6 +142,23 @@ head(data_cancer, 10)
 **Relevancy**: The results can provide insight into potential medical and healthcare advancements
 
 
+### Subtask e)
+
+```{r}
+data_breast_cancer <- data_cancer %>%
+  select(Entity, Year, Breast) %>%
+  filter(!is.na(Breast))
+
+dev_breast_cancer <- data_breast_cancer %>%
+  arrange(Entity, Year) %>%
+  group_by(Entity) %>%
+  mutate(Change = Breast - lag(Breast))
+
+head(dev_breast_cancer, 10)
+```
+
+**Explanation:** This new dataset introduces a new variable called "Change," which shows the difference in five-year-survival rates for breast cancer between the later survey year (e.g., 2009) and the earlier survey year (e.g., 2004). "NA"-values exist for survey years where there is no earlier survey year, such as 1999.
+
 ## Final Note
 
 Make sure to push all your commits and changes to GitHub before
