@@ -135,6 +135,13 @@ head(data_cancer, 10)
 **Link:** https://github.com/owid/owid-datasets/tree/master/datasets/Five%20year%20cancer%20survival%20rates%20-%20Allemani%20et%20al.%20
 
 
+### Subtask d)
+
+**Research Question:** How have the five-year-survival rates for breast cancer developed over time across different countries?
+
+**Relevancy**: The results can provide insight into potential medical and healthcare advancements
+
+
 ## Final Note
 
 Make sure to push all your commits and changes to GitHub before
