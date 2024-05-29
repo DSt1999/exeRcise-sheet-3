@@ -118,27 +118,22 @@ kable(top_10_names, caption = "Top 10 Most Popular Names Across 2022 and 2023")
 
 ## Exercise 4: Open Analysis (4 points)
 
-This exercise is a bit more open-ended. You can choose any dataset from
-[Our World in Data](https://ourworldindata.org/) and analyze it, while
-determining the research question yourself.
 
-a)  Go to <https://github.com/owid/owid-datasets/tree/master/datasets>
-    and choose a dataset that interests you. You can have a look at
-    <https://ourworldindata.org/> to gather some inspiration.
-b)  Download the dataset and track it in git.
-c)  Put the name / title of the dataset and a link to it below.
+### Subtask b)
 
--   Dataset Name: ...
--   Link: <https://github.com/owid/owid-datasets/>...
+```{r}
+data_cancer <- read_csv("data/Five year cancer survival rates - Allemani et al..csv")
 
-d)  Come up with a (research) question you want to answer with the data
-    and briefly explain why you believe this is an interesting question
-    within one sentence. It should be a question that can be answered
-    with the dataset and using R.
-e)  Use R to answer your chosen question.
-f)  Create a meaningful plot / figure with the dataset. Make sure to
-    provide a figure caption (via the chunk options / Rmarkdown) and
-    correctly label the figure.
+head(data_cancer, 10)
+```
+
+
+### Subtask c)
+
+**Dataset Name:** Five year cancer survival rates
+
+**Link:** https://github.com/owid/owid-datasets/tree/master/datasets/Five%20year%20cancer%20survival%20rates%20-%20Allemani%20et%20al.%20
+
 
 ## Final Note
 
